@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- DOCTYPE — сообщает браузеру, что это страница HTML5 -->
+<!-- HTML — корневой тег; lang="ru" — язык страницы -->
+<html lang="ru">
+
+<!-- HEAD — служебная часть, на экране не видна -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TITLE — название во вкладке браузера -->
+  <title>Кира Толкачёва — бизнес-аналитик</title>
+
+  <!-- Шрифты с Google Fonts: Playfair Display (заголовки) и Inter (основной текст) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- LINK rel="stylesheet" — подключаем файл со стилями style.css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- BODY — видимая часть страницы -->
+<body id="top">
+
+  <!-- ================= СЕКЦИЯ 1 — ГЛАВНЫЙ ЭКРАН ================= -->
+  <section class="hero">
+
+    <!-- HEADER — верхняя панель: логотип, меню, кнопка -->
+    <header class="top">
+      <!-- A — ссылка. Логотип ведёт наверх страницы (#top — id у body) -->
+      <a class="logo" href="#top"><span class="star">✦</span> Кира Толкачёва</a>
+
+      <!-- NAV — блок навигации. Ссылки с # ведут к блокам этой же страницы по их id -->
+      <nav>
+        <a href="#top">Обо мне</a>
+        <a href="#achievements">Мои достижения</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <!-- Кнопка в углу. Ссылка https://t.me/ttkirrra открывает Telegram. target="_blank" — в новой вкладке -->
+      <a class="top-btn" href="https://t.me/ttkirrra" target="_blank" rel="noopener">Связаться со мной ↗</a>
+    </header>
+
+    <!-- Левая колонка: тексты -->
+    <div class="hero-text">
+      <!-- SPAN — плашка над заголовком -->
+      <span class="tag">✦ бизнес-аналитика · данные · процессы</span>
+
+      <!-- H1 — главный заголовок. SPAN внутри нужны, чтобы оформить строки по-разному -->
+      <h1>
+        <span class="hello">Привет!</span>
+        <span class="name">Я Кира Толкачёва —</span>
+        <!-- EM — выделенный текст: в CSS ему добавлен «маркер» под словами -->
+        <em>будущий бизнес-аналитик</em>
+      </h1>
+
+      <!-- H2 — подзаголовок -->
+      <h2>Превращаю данные и процессы<br>в понятные решения ♡</h2>
+
+      <!-- P — абзац-описание -->
+      <p>Учусь анализировать данные, описывать бизнес-процессы и находить точки роста.</p>
+
+      <div class="buttons">
+        <!-- Главная кнопка-ссылка (CTA): ведёт в Telegram -->
+        <a class="btn btn-main" href="https://t.me/ttkirrra" target="_blank" rel="noopener">Связаться со мной ↗</a>
+        <!-- Ссылка вниз к секции 2 -->
+        <a class="btn btn-ghost" href="#achievements">Смотреть дальше ↓</a>
+      </div>
+    </div>
+
+    <!-- Правая колонка: фото. FIGURE — блок с иллюстрацией -->
+    <figure class="hero-image">
+      <!-- DIV .photo-frame — рамка-«клякса»: скругляет фото неровным контуром и рисует лаймовую обводку -->
+      <div class="photo-frame">
+        <!-- IMG: src — путь к файлу, alt — описание, width/height — размеры в пикселях -->
+        <img class="photo" src="kira.jpg"
+             alt="Кира Толкачёва в солнечных очках на фоне ромашкового поля"
+             width="853" height="1280">
+      </div>
+      <!-- SPAN — карточка-стикер, чуть наклонённая -->
+      <span class="chip">▂▄▆ Данные<br>→ Выводы ✦</span>
+      <!-- Декоративные искры -->
+      <span class="spark s1">✦</span>
+      <span class="spark s2">✦</span>
+    </figure>
+  </section>
+
+  <!-- ================= СЕКЦИЯ 2 — «МОИ ДОСТИЖЕНИЯ» ================= -->
+  <!-- id="achievements" — «якорь», на него ведут ссылки меню -->
+  <section class="achievements" id="achievements">
+
+    <!-- DIV .container — обёртка: ширина 92% экрана, но не больше 1140 px, по центру -->
+    <div class="container">
+
+      <span class="pill">✦ Мои достижения</span>
+      <!-- H2 — заголовок секции: слово «достижения» в EM (курсив) -->
+      <h2>Мои <em>достижения</em></h2>
+      <p class="subtitle">Учебные проекты, которыми я горжусь</p>
+
+      <!-- DIV .cards — FLEX-контейнер: три карточки в ряд (на телефоне — в колонку, см. @media в CSS) -->
+      <div class="cards">
+
+        <!-- ARTICLE — карточка. Внутри: номер, картинка, заголовок, текст, кнопка -->
+        <article class="card">
+          <span class="num">01</span>
+          <img src="research.svg" alt="Иллюстрация: дашборд с лупой" width="400" height="260">
+          <h3>Научная работа об ИИ в бизнесе</h3>
+          <p>Исследовала, какие бизнес-процессы и функции персонала можно передать искусственному интеллекту, на примере международного банка.</p>
+          <!-- Вместо # вставьте ссылку на работу или репозиторий -->
+          <a class="card-btn" href="#">Подробнее →</a>
+        </article>
+
+        <article class="card">
+          <span class="num">02</span>
+          <img src="model.svg" alt="Иллюстрация: монеты и стрелка роста" width="400" height="260">
+          <h3>Моделирование инвестиций</h3>
+          <p>Строю имитационную модель инвестиционного проекта в Excel: макрос, расчёт чистой приведённой стоимости и реальный кейс.</p>
+          <a class="card-btn" href="#">Подробнее →</a>
+        </article>
+
+        <article class="card">
+          <span class="num">03</span>
+          <img src="database.svg" alt="Иллюстрация: база данных и шестерёнка" width="400" height="260">
+          <h3>Проектирование баз данных</h3>
+          <p>Разрабатывала структуры баз данных: ER-модели, JSON-схемы и запросы в Access.</p>
+          <a class="card-btn" href="#">Подробнее →</a>
+        </article>
+      </div>
+
+      <!-- ================= БАННЕР КОНТАКТОВ ================= -->
+      <!-- DIV .contact — тоже flex-контейнер: сердечко, текст, кнопка и чашка в одну строку -->
+      <div class="contact" id="contacts">
+        <span class="heart">♡</span>
+        <div class="contact-text">
+          <h3>Давайте создадим что-то классное вместе!</h3>
+          <p>Свяжитесь со мной, и я с радостью расскажу больше о себе и своих проектах ♡</p>
+        </div>
+        <a class="btn btn-main" href="https://t.me/ttkirrra" target="_blank" rel="noopener">Написать мне ↗</a>
+        <img class="cup" src="cup.svg" alt="Иллюстрация: стаканчик кофе" width="160" height="200">
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
